@@ -77,6 +77,8 @@ switch ($moisactuel) {
 
 //Exercice 3 
 //Question 1 
+
+echo "<br><br>";
 for ($i = 1; $i <= 6; $i++) {
     for ($j = 1; $j <= $i; $j++) {
         echo "*";
@@ -100,10 +102,10 @@ $i2 = 1;
 while ($i2 <= 10) {
     switch ($i2) {
         case 5:
-            echo "At 5<br>";
+            echo "En 5<br>";
             break;
         case 10:
-            echo "At 10; quitting<br>";
+            echo "En 10 la boucle s'arrete<br>";
             break 2;
     }
     $i2++;
