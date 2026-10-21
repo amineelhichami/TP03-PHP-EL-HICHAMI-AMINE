@@ -1,4 +1,8 @@
 <?php 
+
+/* Auteur : Amine EL HICHAMI
+     
+  Date : 18-10-2036 */
 require ("config.php") ;
 
 function mention(int $note){
@@ -70,4 +74,50 @@ switch ($moisactuel) {
         echo "Nombre invalide";
         break;
 }
+
+//Exercice 3 
+//Question 1 
+for ($i = 1; $i <= 6; $i++) {
+    for ($j = 1; $j <= $i; $j++) {
+        echo "*";
+    }
+    echo "<br>";
+}
+
+//Question 2 
+$i = 0;
+while ($i <= 20) {
+    if ($i == 10) {
+        echo "<strong>" . $i . "</strong><br>";
+    } else {
+        echo $i . "<br>";
+    }
+    $i += 2;
+}
+
+//Question 3 
+$i2 = 1;
+while ($i2 <= 10) {
+    switch ($i2) {
+        case 5:
+            echo "At 5<br>";
+            break;
+        case 10:
+            echo "At 10; quitting<br>";
+            break 2;
+    }
+    $i2++;
+}
+
+//Question 4
+$i3 = 0;
+do {
+    if ($i3 == 10) {
+        echo "<strong>" . $i3 . "</strong><br>";
+    } else {
+        echo $i3 . "<br>";
+    }
+    $i3 += 2;
+} while ($i3 <= 20);
+
 ?>
