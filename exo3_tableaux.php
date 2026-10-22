@@ -1,5 +1,8 @@
 <?php
 require "config.php";
+require "includes/entete_inc.php";
+require "includes/menu_inc.php";
+require "includes/pied_inc.php";
 
 function mention(int $note): string {
     if ($note >= 16) {
@@ -82,21 +85,20 @@ foreach ($notes as $nom => $note) {
 }
 $moyenne = $somme / $effectif;
 echo "<h3>Calcul avec une boucle</h3>";
-echo "Somme : " . $somme . "<br>";
-echo "Nombre d'apprenants : " . $effectif . "<br>";
-echo "Moyenne : " . round($moyenne, 2) . "<br>";
-echo "Meilleure note : " . $meilleure . "<br>";
-echo "Plus faible note : " . $faible . "<br>";
+echo "Somme : ".$somme."<br>";
+echo "Nombre d'apprenants : ".$effectif."<br>";
+echo "Moyenne : ".round($moyenne, 2)."<br>";
+echo "Meilleure note : ".$meilleure."<br>";
+echo "Plus faible note : ".$faible."<br>";
 
 // 2. Vérification avec les fonctions prédéfinies
 echo "<h3>Vérification avec les fonctions PHP</h3>";
 
-echo "Somme : " . array_sum($notes) . "<br>";
-echo "Nombre d'apprenants : " . count($notes) . "<br>";
-echo "Moyenne : " .
-     round(array_sum($notes) / count($notes), 2) . "<br>";
-echo "Meilleure note : " . max($notes) . "<br>";
-echo "Plus faible note : " . min($notes) . "<br>";
+echo "Somme : ".array_sum($notes)."<br>";
+echo "Nombre d'apprenants : ".count($notes)."<br>";
+echo "Moyenne : ".round(array_sum($notes) / count($notes), 2)."<br>";
+echo "Meilleure note : ".max($notes)."<br>";
+echo "Plus faible note : ".min($notes)."<br>";
 
 // 3. Nombre d'apprenants par mention
 echo "<h3>Effectifs par mention</h3>";
@@ -110,7 +112,7 @@ foreach ($notes as $nom => $note) {
     }
 }
 foreach ($effectifs as $m => $nombre) {
-    echo $m . " : " . $nombre . "<br>";
+    echo $m." : ".$nombre."<br>";
 }
 // Fonction d'affichage réutilisable
 function afficher($tab): void {
@@ -151,7 +153,7 @@ $modules_tries = $modules;
 sort($modules_tries);
 
 foreach ($modules_tries as $module) {
-    echo $module . "<br>";
+    echo $module."<br>";
 }
 echo "<h2>Exercice 3.5 : Opérateurs de tableaux</h2>";
 

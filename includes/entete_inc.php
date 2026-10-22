@@ -1,0 +1,6 @@
+<?php 
+define("ETABLISSEMENT" , "FSSM");
+
+
+
+?>
